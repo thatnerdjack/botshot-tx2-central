@@ -26,5 +26,8 @@
     <ClCompile Include="botshot-tx2-central.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tcp-ip-com.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
