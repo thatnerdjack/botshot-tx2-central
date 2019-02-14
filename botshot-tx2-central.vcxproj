@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="tcp-ip-com.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="botshot-tx2-central.cpp" />
