@@ -5,11 +5,13 @@
 #include "tcp-ip-com.cpp"
 
 #include <iostream>
+#include <thread>
 
 using namespace std;
 
 int main() {
-  server_connect_woo();
+  std::thread server_thr(server_connect_woo);
+  printf("yote\n");
 	return 0;
 }
 
