@@ -2,11 +2,14 @@
 //
 
 #include "pch.h"
+#include "tcp-ip-com.cpp"
 
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    std::cout << "Hello World!\n"; 
+  server_connect_woo();
 	return 0;
 }
 

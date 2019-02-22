@@ -2,8 +2,9 @@
 
 #include "pch.h"
 
-#ifdef __WIN32__
-# include <WinSock2.h>
-#else
-# include <sys/socket.h>
-#endif
+#include <unistd.h> 
+#include <stdio.h> 
+#include <sys/socket.h> 
+#include <stdlib.h> 
+#include <netinet/in.h> 
+#include <string.h> 
