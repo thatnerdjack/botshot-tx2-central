@@ -3,8 +3,13 @@
 #include "rplidar-sdk/include/rplidar.h"
 
 void lidar_connect() {
+<<<<<<< HEAD
   rp::standalone::rplidar::RPlidarDriver *lidar = rp::standalone::rplidar::RPlidarDriver::CreateDriver();
-  u_result res = lidar->connect("/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0", 256000);
+  u_result res = lidar->connect("PATH", 256000);
+=======
+  rp::standalone::rplidar::RPlidarDriver *lidar = rp::standalone::rplidar::RPlidarDriver::CreateDriver(0);
+  u_result res = lidar->connect("PATH", 256000);
+>>>>>>> c993d178b66a40d2fa5b9aca37b01ef2af2983b5
 
   if(IS_OK(res)) {
     printf("YEEHAW\n");
