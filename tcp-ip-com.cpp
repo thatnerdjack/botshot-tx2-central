@@ -4,14 +4,13 @@
 
 #include "tcp-ip-com.h"
 
-#define PORT (8080)
+#define PORT (4169)
 
 using namespace std;
 
 int socketDescrip, new_socket;
 struct sockaddr_in address;
 int addrlen = sizeof(address);
-char buffer[1024] = { 0 };
 
 int init() {
   socketDescrip = socket(AF_INET, SOCK_STREAM, 0);
@@ -46,8 +45,11 @@ int init() {
   return 0;
 }
 
-int start_read(char *buffer) {
-    //code?
+int start_read(char *buffer, int buffer_size, int *read_status) {
+    while(1) {
+      *read_status = read(new_socket, buffer, buffer_size);
+      sleep(1);
+    }
 }
 
 // int valread = read(new_socket, buffer, 1024);
