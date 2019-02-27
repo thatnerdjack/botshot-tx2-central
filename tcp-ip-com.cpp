@@ -50,7 +50,7 @@ int start_read(char *buffer, int buffer_size, int *read_status) {
       *read_status = read(new_socket, buffer, buffer_size);
       printf("buffer: %s", buffer);
 
-      if(strcmp(buffer, "^]") == 0) {
+      if(buffer[0] == '~') {
         break;
       }
 
