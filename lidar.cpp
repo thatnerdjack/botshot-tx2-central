@@ -3,7 +3,7 @@
 #include "rplidar-sdk/include/rplidar.h"
 
 void lidar_connect() {
-  rp::standalone::rplidar::RPlidarDriver *lidar = rp::standalone::rplidar::RPlidarDriver::CreateDriver();
+  rp::standalone::rplidar::RPlidarDriver *lidar = rp::standalone::rplidar::RPlidarDriver::CreateDriver(0);
   u_result res = lidar->connect("PATH", 256000);
 
   if(IS_OK(res)) {
