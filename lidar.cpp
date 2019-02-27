@@ -1,6 +1,5 @@
 //lidar
 
-#include "pch.h"
 #include "rplidar-sdk/include/rplidar.h"
 
 void lidar_connect() {

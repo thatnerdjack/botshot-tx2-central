@@ -1,7 +1,5 @@
 //tcp-ip-com.cpp
 
-#include "pch.h"
-
 #include "tcp-ip-com.h"
 
 #define PORT (4169)
