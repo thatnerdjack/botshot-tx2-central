@@ -49,6 +49,7 @@ int start_read(char *buffer, int buffer_size, int *read_status) {
     while(1) {
       *read_status = read(new_socket, buffer, buffer_size);
       printf("buffer: %s", buffer);
+      memset(buffer, 0, buffer_size);
       sleep(1);
     }
 }
