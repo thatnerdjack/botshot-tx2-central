@@ -20,7 +20,6 @@ int main() {
   std::thread read_thread(start_read, buffer, sizeof(buffer), read_status);
 
   read_thread.join();
-
   printf("yote\n");
   return 0;
 }

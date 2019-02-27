@@ -52,13 +52,17 @@ int start_read(char *buffer, int buffer_size, int *read_status) {
 
       if(buffer[0] == '~') {
         break;
-      }
+      } //TODO: currently segfualts but ya know that's better than nothing??
 
       memset(buffer, 0, buffer_size);
       sleep(1);
     }
 
     return 0;
+}
+
+int send_message(char *message, int message_size) {
+  send(new_socket, message, message_size, 0);
 }
 
 // int valread = read(new_socket, buffer, 1024);
