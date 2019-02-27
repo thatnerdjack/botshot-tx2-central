@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "tcp-ip-com.cpp"
+#include "lidar.cpp"
 
 #include <iostream>
 #include <thread>
@@ -18,6 +19,7 @@ int main() {
   int *read_status;
 
   std::thread read_thread(start_read, buffer, sizeof(buffer), read_status);
+  lidar_connect();
 
   read_thread.join();
   printf("yote\n");
